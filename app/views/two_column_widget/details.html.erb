@@ -1,6 +1,63 @@
-<%= scrivito_details_for 'column 1' do %>
-  <%= scrivito_toggle_button_editor(widget, :column_1_width, (1..12).to_a) %>
-<% end %>  
-<%= scrivito_details_for 'column 2' do %>  
-  <%= scrivito_toggle_button_editor(widget, :column_2_width, (1..12).to_a) %>
-<% end %>
+<div class="details-view">
+  <ul class="tab-list">
+    <li class="active" data="<%= {panel_target:"#edit-width" %>">}
+      Column Width
+    </li>
+    <li data="<%= {panel_target:"#edit-advanced-width" %>">}
+      Advanced Column Width  
+    </li>
+    <li data="<%= {panel_target:"#edit-animation1" %>">}
+      Animation Column Left
+    </li>
+    <li data="<%= {panel_target:"#edit-animation2" %>">}
+      Animation Column Middle
+    </li>
+    <li data="<%= {panel_target:"#edit-animation3" %>">}
+      Animation Column Right  
+    </li>
+  </ul>
+  <div class="tab-panels">
+    <div class="tab-panel" id="edit-width">
+      <%= scrivito_details_for '1st Column Width' do %>
+        <%= scrivito_toggle_button_editor(widget, :column_1_width, (1..12).to_a) %>
+      <% end %>
+      <%= scrivito_details_for '2nd Column Width' do %>
+        <%= scrivito_toggle_button_editor(widget, :column_2_width, (1..12).to_a) %>
+      <% end %>
+    </div>
+    <div class="tab-panel" id="edit-advanced-width">
+      <%= scrivito_details_for 'Desktop Display Size' do %>
+        <h4>
+          1st Column Width for Desktop
+          <%= scrivito_toggle_button_editor(widget, :column_1_desktop_width, (1..12).to_a) %>
+          2nd Column Width for Desktop
+          <%= scrivito_toggle_button_editor(widget, :column_2_desktop_width, (1..12).to_a) %>
+        </h4>
+      <% end %>
+      <%= scrivito_details_for 'Tablet Display Size' do %>
+        <h4>
+          1st Column Width for Tablet
+          <%= scrivito_toggle_button_editor(widget, :column_1_tablet_width, (1..12).to_a) %>
+          2nd Column Width for Tablet
+          <%= scrivito_toggle_button_editor(widget, :column_2_tablet_width, (1..12).to_a) %>
+        </h4>
+      <% end %>
+      <%= scrivito_details_for 'Mobile Display Size' do %>
+        <h4>
+          1st Column Width for Phone
+          <%= scrivito_toggle_button_editor(widget, :column_1_mobile_width, (1..12).to_a) %>
+          2nd Column Width for Phone
+          <%= scrivito_toggle_button_editor(widget, :column_2_mobile_width, (1..12).to_a) %>
+        </h4>
+      <% end %>
+    </div>
+    <div class="tab-panel" id="edit-animation1">
+      <h4>Animation for Column 1</h4>
+      <%= scrivito_toggle_button_editor(widget, :animation_1, Column.animations) %>
+    </div>
+    <div class="tab-panel" id="edit-animation2">
+      <h4>Animation for Column 2</h4>
+      <%= scrivito_toggle_button_editor(widget, :animation_2, Column.animations) %>
+    </div>
+  </div>
+</div>
