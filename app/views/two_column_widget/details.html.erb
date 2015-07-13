@@ -18,6 +18,9 @@
   </ul>
   <div class="tab-panels">
     <div class="tab-panel" id="edit-width">
+    	<div class="alert alert-info">
+          Make sure that the amount of Columns is always 12
+       </div>
       <%= scrivito_details_for '1st Column Width' do %>
         <%= scrivito_toggle_button_editor(widget, :column_1_width, (1..12).to_a) %>
       <% end %>
@@ -26,6 +29,9 @@
       <% end %>
     </div>
     <div class="tab-panel" id="edit-advanced-width">
+    	<div class="alert alert-info">
+          Make sure that the amount of Columns is always 12
+       </div>
       <%= scrivito_details_for 'Desktop Display Size' do %>
         <h4>
           1st Column Width for Desktop
