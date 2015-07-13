@@ -1,3 +1,6 @@
 <%= scrivito_details_for 'column 1' do %>
-  <%= scrivito_tag(:div, widget, :column_1_width, data: { editor: 'slider', min: 1, max: 12 }) %>
+  <%= scrivito_toggle_button_editor(widget, :column_1_width, (1..12).to_a) %>
+<% end %>  
+<%= scrivito_details_for 'column 2' do %>  
+  <%= scrivito_toggle_button_editor(widget, :column_2_width, (1..12).to_a) %>
 <% end %>
