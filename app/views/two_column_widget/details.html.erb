@@ -19,7 +19,7 @@
   <div class="tab-panels">
     <div class="tab-panel" id="edit-width">
     	<div class="alert alert-info">
-          Make sure that the amount of Columns is always 12
+          Here you edit the <b>col-md</b>. For further information about Responsive Design check http://getbootstrap.com/css/#grid
        </div>
       <%= scrivito_details_for '1st Column Width' do %>
         <%= scrivito_toggle_button_editor(widget, :column_1_width, (1..12).to_a) %>
@@ -30,7 +30,7 @@
     </div>
     <div class="tab-panel" id="edit-advanced-width">
     	<div class="alert alert-info">
-          Make sure that the amount of Columns is always 12
+          Here you edit the <b>col-lg</b>. For further information about Responsive Design check http://getbootstrap.com/css/#grid
        </div>
       <%= scrivito_details_for 'Desktop Display Size' do %>
         <h4>
@@ -40,6 +40,9 @@
           <%= scrivito_toggle_button_editor(widget, :column_2_desktop_width, (1..12).to_a) %>
         </h4>
       <% end %>
+      <div class="alert alert-info">
+          Here you edit the <b>col-sm</b>. For further information about Responsive Design check http://getbootstrap.com/css/#grid
+       </div>
       <%= scrivito_details_for 'Tablet Display Size' do %>
         <h4>
           1st Column Width for Tablet
@@ -48,6 +51,9 @@
           <%= scrivito_toggle_button_editor(widget, :column_2_tablet_width, (1..12).to_a) %>
         </h4>
       <% end %>
+      <div class="alert alert-info">
+          Here you edit the <b>col-xs</b>. For further information about Responsive Design check http://getbootstrap.com/css/#grid
+       </div>
       <%= scrivito_details_for 'Mobile Display Size' do %>
         <h4>
           1st Column Width for Phone
